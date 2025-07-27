@@ -65,3 +65,50 @@ else{
     console.log('The dicount is not apply because is not holiday to day or not meet the age requirements');
 }
 
+
+
+let Userage = 16;
+
+function validation(age){
+
+    if(age<18){
+
+        console.log('To young');
+   return;
+    }
+    else{
+
+        console.log('Its in the legal age');
+
+    }
+}
+
+
+
+
+if(  Userage===0 || Userage<=15 ){
+
+  console.log('Must be above 15 yearold')
+}
+
+else{
+
+    validation(Userage);
+}
+
+
+function helloFiveTimes(){
+
+    console.log('Helooo pooooe...');
+
+    alert('Wahhhh');
+}
+
+for(let i = 0; i<=4; i++){
+
+    helloFiveTimes();
+}
+
+
+
+
