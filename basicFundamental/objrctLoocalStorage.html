@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <input type="text" placeholder="Name" id="name">
+    <input type="text" placeholder="Age" id="age">
+
+    <button id="Save">Save</button>
+    <button id="View">View</button>
+
+
+
+
+
+    <script>
+
+
+let saveInfo = document.querySelector('#Save');
+let ViewInfo = document.querySelector('#View');
+let namep = document.querySelector('#name');
+let age = document.querySelector('#age');
+
+
+
+  
+
+function save(){
+
+      let person = {
+     name: namep.value,
+     age: age.value
+}
+   
+   localStorage.setItem('person',JSON.stringify(person));
+ 
+
+}
+  
+function view(){
+
+  let per = JSON.parse(localStorage.getItem('person'));
+
+  console.log(`${per.name}`);
+  console.log(`${per.age}`);
+
+
+
+
+}
+          
+saveInfo.addEventListener('click',save);
+ViewInfo.addEventListener('click', view);
+    </script>
+</body>
+</html>
